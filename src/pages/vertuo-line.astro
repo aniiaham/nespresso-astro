@@ -24,8 +24,7 @@ import { VertuoCoffees } from '../components/data.astro';
 			<strong>Vertuo Line Caffeine Content Info</strong>
 		</p>
 		<div>
-				{VertuoCoffees.map((coffee) => {
-					return (
+				
 					<Table>
 						<TableHeader>
 							<TableRow>
@@ -38,18 +37,21 @@ import { VertuoCoffees } from '../components/data.astro';
 							</TableRow>
 						</TableHeader>
 						<TableBody>
+							{VertuoCoffees.map((coffee) => {
+					return (
 				  <TableRow>
-					<TableCell className="font-medium text-center">{coffee.name}</TableCell>
-					<TableCell className="text-center">{coffee.type}</TableCell>
-					<TableCell className="text-center">{coffee.size}</TableCell>
-					<TableCell className="text-center">{coffee.profile}</TableCell>
-					<TableCell className="text-center">{coffee.roast}</TableCell>
-					<TableCell className="text-center">{coffee.caffeine}</TableCell>
+					<TableCell className="font-medium">{coffee.name}</TableCell>
+					<TableCell>{coffee.type}</TableCell>
+					<TableCell>{coffee.size}</TableCell>
+					<TableCell>{coffee.profile}</TableCell>
+					<TableCell className="capitalize">{coffee.roast.toLocaleLowerCase()}</TableCell>
+					<TableCell>{coffee.caffeine}</TableCell>
 				  </TableRow>
+				  )
+				})}
 				</TableBody>
 						</Table>
-					)
-				})}
+					
 			
 			  
 		</div>
@@ -63,10 +65,9 @@ import { VertuoCoffees } from '../components/data.astro';
 		width: 1100px;
 		max-width: calc(100% - 2rem);
 		color: white;
+		text-align: center;
 	}
-	div {
-		font-size: 18px;
-	}
+	
 	h1 {
 		font-size: 4rem;
 		font-weight: 700;
