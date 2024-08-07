@@ -9,37 +9,48 @@ import {
   TableHeader,
   TableRow,
 } from "../../@/components/ui/table"
+import { VertuoCoffees } from '../components/data.astro';
+
+
+
 ---
 
 
 
 <Layout title="Welcome to Astro.">
 	<main>
-		
 		<p class="instructions">
 			<!-- To get started, open the directory <code>src/pages</code> in your project.<br /> -->
-			<strong>Vertuo Line Capsule Info</strong>
+			<strong>Vertuo Line Caffeine Content Info</strong>
 		</p>
 		<div>
-			<Table>
-				<TableCaption>A list of your recent invoices.</TableCaption>
-				<TableHeader>
+				{VertuoCoffees.map((coffee) => {
+					return (
+					<Table>
+						<TableHeader>
+							<TableRow>
+								<TableHead className="font-medium text-center">Name</TableHead>
+								<TableHead className="font-medium text-center">Type</TableHead>
+								<TableHead className="font-medium text-center">Size</TableHead>
+								<TableHead className="font-medium text-center">Profile</TableHead>
+								<TableHead className="font-medium text-center">Roast</TableHead>
+								<TableHead className="font-medium text-center">Caffeine</TableHead>
+							</TableRow>
+						</TableHeader>
+						<TableBody>
 				  <TableRow>
-					<TableHead className="w-[100px]">Invoice</TableHead>
-					<TableHead>Status</TableHead>
-					<TableHead>Method</TableHead>
-					<TableHead className="text-right">Amount</TableHead>
-				  </TableRow>
-				</TableHeader>
-				<TableBody>
-				  <TableRow>
-					<TableCell className="font-medium">INV001</TableCell>
-					<TableCell>Paid</TableCell>
-					<TableCell>Credit Card</TableCell>
-					<TableCell className="text-right">$250.00</TableCell>
+					<TableCell className="font-medium text-center">{coffee.name}</TableCell>
+					<TableCell className="text-center">{coffee.type}</TableCell>
+					<TableCell className="text-center">{coffee.size}</TableCell>
+					<TableCell className="text-center">{coffee.profile}</TableCell>
+					<TableCell className="text-center">{coffee.roast}</TableCell>
+					<TableCell className="text-center">{coffee.caffeine}</TableCell>
 				  </TableRow>
 				</TableBody>
-			  </Table>
+						</Table>
+					)
+				})}
+			
 			  
 		</div>
 	</main>
@@ -49,20 +60,12 @@ import {
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 800px;
+		width: 1100px;
 		max-width: calc(100% - 2rem);
 		color: white;
-		font-size: 20px;
-		line-height: 1.6;
 	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
+	div {
+		font-size: 18px;
 	}
 	h1 {
 		font-size: 4rem;
@@ -70,13 +73,6 @@ import {
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
 	}
 	.instructions {
 		margin-bottom: 2rem;
@@ -86,21 +82,5 @@ import {
 		border-radius: 8px;
 		text-align: center;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+
 </style>
