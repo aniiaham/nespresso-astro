@@ -28,24 +28,24 @@ import { VertuoCoffees } from '../components/data.astro';
 					<Table>
 						<TableHeader>
 							<TableRow>
-								<TableHead className="font-medium text-center">Name</TableHead>
-								<TableHead className="font-medium text-center">Type</TableHead>
-								<TableHead className="font-medium text-center">Size</TableHead>
-								<TableHead className="font-medium text-center">Profile</TableHead>
-								<TableHead className="font-medium text-center">Roast</TableHead>
-								<TableHead className="font-medium text-center">Caffeine</TableHead>
+								<TableHead className="font-medium">Name</TableHead>
+								<TableHead className="font-medium">Type</TableHead>
+								<TableHead className="font-medium">Size</TableHead>
+								<TableHead className="font-medium">Profile</TableHead>
+								<TableHead className="font-medium">Roast</TableHead>
+								<TableHead className="font-medium">Caffeine</TableHead>
 							</TableRow>
 						</TableHeader>
 						<TableBody>
 							{VertuoCoffees.map((coffee) => {
 					return (
 				  <TableRow>
-					<TableCell className="font-medium">{coffee.name}</TableCell>
+					<TableCell className="font-medium text-left pl-8">{coffee.name}</TableCell>
 					<TableCell>{coffee.type}</TableCell>
 					<TableCell>{coffee.size}</TableCell>
 					<TableCell>{coffee.profile}</TableCell>
 					<TableCell className="capitalize">{coffee.roast.toLocaleLowerCase()}</TableCell>
-					<TableCell>{coffee.caffeine}</TableCell>
+					<TableCell className="pr-8">{coffee.caffeine}</TableCell>
 				  </TableRow>
 				  )
 				})}
