@@ -17,12 +17,11 @@ import { VertuoCoffees } from '../components/data.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<p class="instructions">
+		<h1 class="instructions">
 			<!-- To get started, open the directory <code>src/pages</code> in your project.<br /> -->
 			<strong>Vertuo Line Caffeine Content Info</strong>
-		</p>
+		</h1>
 		<div>
-				
 					<Table>
 						<TableHeader>
 							<TableRow>
@@ -38,7 +37,7 @@ import { VertuoCoffees } from '../components/data.astro';
 							{VertuoCoffees.map((coffee) => {
 					return (
 				  <TableRow>
-					<TableCell className="font-medium text-left pl-8">{coffee.name}</TableCell>
+					<TableCell className="font-medium pl-8 h-16 capitalize text-left">{coffee.name.toLocaleLowerCase()}</TableCell>
 					<TableCell>{coffee.type}</TableCell>
 					<TableCell>{coffee.size}</TableCell>
 					<TableCell>{coffee.profile}</TableCell>
@@ -48,10 +47,7 @@ import { VertuoCoffees } from '../components/data.astro';
 				  )
 				})}
 				</TableBody>
-						</Table>
-					
-			
-			  
+						</Table>  
 		</div>
 	</main>
 </Layout>
@@ -60,26 +56,21 @@ import { VertuoCoffees } from '../components/data.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		width: 1100px;
+		width: fit-content;
 		max-width: calc(100% - 2rem);
 		color: white;
 		text-align: center;
 	}
 	
 	h1 {
-		font-size: 4rem;
-		font-weight: 700;
+		margin-top: 2rem;
+		font-size: 2rem;
+		font-weight: 500;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		color: #eb6f48
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1rem;
-		border-radius: 8px;
-		text-align: center;
-	}
+	
 
 </style>
