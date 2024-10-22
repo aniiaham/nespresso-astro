@@ -1,70 +1,75 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "@/layouts/Layout.astro";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
-} from "../../@/components/ui/table"
-import { OriginalCoffees } from '../components/data.astro'
+} from "@/components/ui/table";
+import { OriginalCoffees } from "@/components/data.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1 class="instructions">
-			<strong>Original Line Capsule Info</strong>
-		</h1>
-		<div>
-			<Table>
-				<TableHeader>
-					<TableRow>
-						<TableHead className="font-medium">Name</TableHead>
-						<TableHead className="font-medium">Type</TableHead>
-						<TableHead className="font-medium">Size</TableHead>
-						<TableHead className="font-medium">Profile</TableHead>
-						<TableHead className="font-medium">Roast</TableHead>
-						<TableHead className="font-medium">Caffeine</TableHead>
-					</TableRow>
-				</TableHeader>
-				<TableBody>
-					{OriginalCoffees.map((coffee) => {
-			return (
-		  <TableRow>
-			<TableCell className="font-medium text-left pl-8 h-16">{coffee.name}</TableCell>
-			<TableCell>{coffee.type}</TableCell>
-			<TableCell>{coffee.size}</TableCell>
-			<TableCell>{coffee.profile}</TableCell>
-			<TableCell className="capitalize">{coffee.roast.toLocaleLowerCase()}</TableCell>
-			<TableCell className="pr-8">{coffee.caffeine}</TableCell>
-		  </TableRow>
-		  )
-		})}
-		</TableBody>
-				</Table>
-		</div>
-	</main>
+  <main>
+    <h1 class="instructions">
+      <strong>Original Line Capsule Info</strong>
+    </h1>
+    <div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="font-medium">Name</TableHead>
+            <TableHead className="font-medium">Type</TableHead>
+            <TableHead className="font-medium">Size</TableHead>
+            <TableHead className="font-medium">Profile</TableHead>
+            <TableHead className="font-medium">Roast</TableHead>
+            <TableHead className="font-medium">Caffeine</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {
+            OriginalCoffees.map((coffee) => {
+              return (
+                <TableRow>
+                  <TableCell className="font-medium text-left pl-8 h-16">
+                    {coffee.name}
+                  </TableCell>
+                  <TableCell>{coffee.type}</TableCell>
+                  <TableCell>{coffee.size}</TableCell>
+                  <TableCell>{coffee.profile}</TableCell>
+                  <TableCell className="capitalize">
+                    {coffee.roast.toLocaleLowerCase()}
+                  </TableCell>
+                  <TableCell className="pr-8">{coffee.caffeine}</TableCell>
+                </TableRow>
+              );
+            })
+          }
+        </TableBody>
+      </Table>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: fit-content;
-		max-width: calc(100% - 2rem);
-		color: white;
-		text-align: center;
-	}
-	
-	h1 {
-		margin-top: 2rem;
-		font-size: 2rem;
-		font-weight: 500;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-		color: #eb6f48
-	}
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #eb6f48;
+  }
 </style>

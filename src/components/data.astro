@@ -1,615 +1,672 @@
 ---
-
-
 export type Coffee = {
-    name: string;
-    type: string;
-    size: string;
-    profile: string;
-    roast: string;
-    caffeine: string
-}
+  name: string;
+  type: string;
+  size: string;
+  profile: string;
+  roast: string;
+  caffeine: string;
+};
 
 export const VertuoCoffees = [
   {
-    name: 'ICE FORTE',
-	type: 'Barista Creations',
- 	size: '7.77 oz',
-    profile: 'Cereal, woody & peppery',
-	roast: 'DARK ROAST',
-	caffeine: '165 mg'
+    name: "ICE FORTE",
+    type: "Barista Creations",
+    size: "7.77 oz",
+    profile: "Cereal, woody & peppery",
+    roast: "DARK ROAST",
+    caffeine: "165 mg",
   },
   {
-	name: 'ICE LEGGERO',
-	type: 'Barista Creations',
- 	size: '2.7 oz',
-    profile: 'Fruity & cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '165 mg'
+    name: "ICE LEGGERO",
+    type: "Barista Creations",
+    size: "2.7 oz",
+    profile: "Fruity & cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "165 mg",
   },
   {
-	name: 'SWEET VANILLA',
-	type: 'Barista Creations',
- 	size: '7.77 oz',
-    profile: 'Sweet biscuit, candied & cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '166 mg'
+    name: "SWEET VANILLA",
+    type: "Barista Creations",
+    size: "7.77 oz",
+    profile: "Sweet biscuit, candied & cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "166 mg",
   },
   {
-	name: 'GOLDEN CARAMEL',
-	type: 'Barista Creations',
- 	size: '7.77 oz',
-    profile: 'Caramel flavor, sweet biscuit',
-	roast: 'MEDIUM ROAST',
-	caffeine: '159 mg'
+    name: "GOLDEN CARAMEL",
+    type: "Barista Creations",
+    size: "7.77 oz",
+    profile: "Caramel flavor, sweet biscuit",
+    roast: "MEDIUM ROAST",
+    caffeine: "159 mg",
   },
   {
-	name: 'RICH CHOCOLATE',
-	type: 'Barista Creations',
- 	size: '7.77 oz',
-    profile: 'Dark chocolate, caramel & cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '160 mg'
-  }, {
-	name: 'ROASTED HAZELNUT',
-	type: 'Barista Creations',
- 	size: '7.77 oz',
-    profile: 'Hazelnut, biscuits & caramel',
-	roast: 'MEDIUM ROAST',
-	caffeine: '170 mg'
-  }, {
-	name: 'BIANCO PICCOLO',
-	type: 'Barista Creations',
- 	size: '1.35 oz',
-    profile: 'Biscuits & caramel',
-	roast: 'DARK ROAST',
-	caffeine: '75 mg'
-  }, {
-	name: 'BIANCO DOPPIO',
-	type: 'Barista Creations',
- 	size: '2.7 oz',
-    profile: 'Fruity, biscuity' ,
-	roast: 'LIGHT ROAST',
-	caffeine: '105 mg'
-  }, {
-	name: 'BIANCO FORTE',
-	type: 'Barista Creations',
- 	size: '7.77 oz',
-    profile: 'Roasted, cereal',
-	roast: 'DARK ROAST',
-	caffeine: '160 mg'
-  }, {
-	name: 'CAFECITO DE PUERTO RICO',
-	type: 'Reviving Origins',
- 	size: '2.7 oz',
-    profile: 'Dark cocoa, pepper & brown spice ',
-	roast: 'DARK ROAST',
-	caffeine: '165 mg'
-  }, 
-  {
-	name: 'KAHAWA YA CONGO',
-	type: 'Reviving Origins',
- 	size: '7.77 oz',
-    profile: 'Toasted cereal, nutty & fruitiness',
-	roast: 'MEDIUM ROAST',
-	caffeine: '150 mg'
+    name: "RICH CHOCOLATE",
+    type: "Barista Creations",
+    size: "7.77 oz",
+    profile: "Dark chocolate, caramel & cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "160 mg",
   },
   {
-	name: 'EL SALVADOR',
-	type: 'Single Origins',
- 	size: '7.77 oz',
-    profile: 'Sweet, biscuit, fruity jam',
-	roast: 'LIGHT ROAST',
-	caffeine: '140 mg'
+    name: "ROASTED HAZELNUT",
+    type: "Barista Creations",
+    size: "7.77 oz",
+    profile: "Hazelnut, biscuits & caramel",
+    roast: "MEDIUM ROAST",
+    caffeine: "170 mg",
   },
   {
-	name: 'PERU ORGANIC',
-	type: 'Single Origins',
- 	size: '1.35 oz',
-    profile: 'Toasted cereal & fruit',
-	roast: 'MEDIUM ROAST',
-	caffeine: '85 mg'
+    name: "BIANCO PICCOLO",
+    type: "Barista Creations",
+    size: "1.35 oz",
+    profile: "Biscuits & caramel",
+    roast: "DARK ROAST",
+    caffeine: "75 mg",
   },
   {
-	name: 'COSTA RICA',
-	type: 'Single Origins',
- 	size: '5.07 oz',
-    profile: 'Malty sweet cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '140 mg'
+    name: "BIANCO DOPPIO",
+    type: "Barista Creations",
+    size: "2.7 oz",
+    profile: "Fruity, biscuity",
+    roast: "LIGHT ROAST",
+    caffeine: "105 mg",
   },
   {
-	name: 'MEXICO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Intense roasted & spiced',
-	roast: 'MEDIUM ROAST',
-	caffeine: '190 mg'
-  }, {
-	name: 'COLOMBIA',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Candied apple & red berry',
-	roast: 'LIGHT ROAST',
-	caffeine: '165 mg'
-  }, {
-	name: 'VIVIDA',
-	type: 'Coffee+',
- 	size: '7.77 oz',
-    profile: 'Cereal, honeyed sweetness',
-	roast: 'MEDIUM ROAST',
-	caffeine: '170 mg'
-  }, {
-	name: 'MELOZIO BOOST',
-	type: 'Coffee+',
- 	size: '7.77 oz',
-    profile: 'Cereal & honeyed sweetness',
-	roast: 'MEDIUM ROAST',
-	caffeine: '200 mg'
-  }, {
-	name: 'STORMIO BOOST',
-	type: 'Coffee+',
- 	size: '7.77 oz',
-    profile: 'Woody & Earthy',
-	roast: 'MEDIUM ROAST',
-	caffeine: '200 mg'
-  }, {
-	name: 'COLD BREW STYLE',
-	type: 'XL Coffees',
- 	size: '12 oz',
-    profile: 'Roasted caramel',
-	roast: 'MEDIUM ROAST',
-	caffeine: '114 mg'
-  }, {
-	name: 'ALTO AMBRATO',
-	type: 'XL Coffees',
- 	size: '12 oz',
-    profile: 'Toasted cereal & sweet caramel',
-	roast: 'LIGHT ROAST',
-	caffeine: '170 mg'
+    name: "BIANCO FORTE",
+    type: "Barista Creations",
+    size: "7.77 oz",
+    profile: "Roasted, cereal",
+    roast: "DARK ROAST",
+    caffeine: "160 mg",
   },
   {
-	name: 'ALTO ONICE',
-	type: 'XL Coffees',
- 	size: '12 oz',
-    profile: 'Cocoa & spice',
-	roast: 'MEDIUM ROAST',
-	caffeine: '190 mg'
-  },{
-	name: 'POUR-OVER STYLE',
-	type: 'XL Coffees',
- 	size: '18 oz',
-    profile: 'Smoky, woody & earthy',
-	roast: 'DARK ROAST',
-	caffeine: '230 mg'
-  },{
-	name: 'INTENSO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '195 mg'
-  },{
-	name: 'STORMIO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Spicy, woody, cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '170 mg'
-  },{
-	name: 'ODACIO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Cereal, bold',
-	roast: 'MEDIUM ROAST',
-	caffeine: '170 mg'
-  },{
-	name: 'MELOZIO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Nutty & balanced',
-	roast: 'MEDIUM ROAST',
-	caffeine: '170 mg'
-  },{
-	name: 'MELOZIO DECAFFEINATO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Nutty & balanced',
-	roast: 'MEDIUM ROAST',
-	caffeine: '11 mg'
-  },{
-	name: 'SOLELIO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Toasted cereal & fruity',
-	roast: 'LIGHT ROAST',
-	caffeine: '133 mg'
-  },{
-	name: 'HALF CAFFEINATO',
-	type: 'Vertuo',
- 	size: '7.77 oz',
-    profile: 'Biscuit, sweet & velvety',
-	roast: 'LIGHT ROAST',
-	caffeine: '83 mg'
+    name: "CAFECITO DE PUERTO RICO",
+    type: "Reviving Origins",
+    size: "2.7 oz",
+    profile: "Dark cocoa, pepper & brown spice ",
+    roast: "DARK ROAST",
+    caffeine: "165 mg",
   },
   {
-	name: 'RISTRETTO INTENSO',
-	type: 'Vertuo',
- 	size: '0.85 oz',
-    profile: 'Peppery spices & wood',
-	roast: 'DARK ROAST',
-	caffeine: '120 mg'
-  },{
-	name: 'IL CAFFÈ',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Cereal, roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '152 mg'
-  },{
-	name: 'DIAVOLITTO',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '144 mg'
-  },{
-	name: 'ALTISSIO',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Cereal, roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '108 mg'
-  },{
-	name: 'ALTISSIO DECAFFEINATO',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Cereal, roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '4 mg'
-  },{
-	name: 'ORAFIO',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Caramel & roasted',
-	roast: 'MEDIUM ROAST',
-	caffeine: '110 mg'
+    name: "KAHAWA YA CONGO",
+    type: "Reviving Origins",
+    size: "7.77 oz",
+    profile: "Toasted cereal, nutty & fruitiness",
+    roast: "MEDIUM ROAST",
+    caffeine: "150 mg",
   },
   {
-	name: 'TOCCANTO',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Berry & winey',
-	roast: 'MEDIUM ROAST',
-	caffeine: '84 mg'
-  },{
-	name: 'VOLTESSO',
-	type: 'Vertuo',
- 	size: '1.35 oz',
-    profile: 'Nutty & balanced',
-	roast: 'LIGHT ROAST',
-	caffeine: '64 mg'
-  },{
-	name: 'DOUBLE ESPRESSO DOLCE',
-	type: 'Double Espresso',
- 	size: '2.7 oz',
-    profile: 'Cereal & malted',
-	roast: 'MEDIUM ROAST',
-	caffeine: '133 mg'
-  },{
-	name: 'DOUBLE ESPRESSO SCURO',
-	type: 'Double Espresso',
- 	size: '2.7 oz',
-    profile: 'Cocoa & vanilla',
-	roast: 'MEDIUM ROAST',
-	caffeine: '150 mg'
-  },{
-	name: 'DOUBLE ESPRESSO CHIARO',
-	type: 'Double Espresso',
- 	size: '2.7 oz',
-    profile: 'Woody & earthy',
-	roast: 'MEDIUM ROAST',
-	caffeine: '135 mg'
+    name: "EL SALVADOR",
+    type: "Single Origins",
+    size: "7.77 oz",
+    profile: "Sweet, biscuit, fruity jam",
+    roast: "LIGHT ROAST",
+    caffeine: "140 mg",
   },
   {
-	name: 'INIZIO',
-	type: 'Gran Lungo',
- 	size: '5.07 oz',
-    profile: 'Toasted cereal & floral',
-	roast: 'MEDIUM ROAST',
-	caffeine: '120 mg'
+    name: "PERU ORGANIC",
+    type: "Single Origins",
+    size: "1.35 oz",
+    profile: "Toasted cereal & fruit",
+    roast: "MEDIUM ROAST",
+    caffeine: "85 mg",
   },
   {
-	name: 'FORTADO',
-	type: 'Gran Lungo',
- 	size: '5.07 oz',
-    profile: 'Cocoa & oak',
-	roast: 'MEDIUM ROAST',
-	caffeine: '195 mg'
-  },{
-	name: 'FORTADO DECAFFEINATO',
-	type: 'Gran Lungo',
- 	size: '5.07 oz',
-    profile: 'Cocoa & oak',
-	roast: 'MEDIUM ROAST',
-	caffeine: '7 mg'
-  },{
-	name: 'ARONDIO',
-	type: 'Gran Lungo',
- 	size: '5.07 oz',
-    profile: 'Cereal & mild',
-	roast: 'MEDIUM ROAST',
-	caffeine: '150 mg'
+    name: "COSTA RICA",
+    type: "Single Origins",
+    size: "5.07 oz",
+    profile: "Malty sweet cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "140 mg",
+  },
+  {
+    name: "MEXICO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Intense roasted & spiced",
+    roast: "MEDIUM ROAST",
+    caffeine: "190 mg",
+  },
+  {
+    name: "COLOMBIA",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Candied apple & red berry",
+    roast: "LIGHT ROAST",
+    caffeine: "165 mg",
+  },
+  {
+    name: "VIVIDA",
+    type: "Coffee+",
+    size: "7.77 oz",
+    profile: "Cereal, honeyed sweetness",
+    roast: "MEDIUM ROAST",
+    caffeine: "170 mg",
+  },
+  {
+    name: "MELOZIO BOOST",
+    type: "Coffee+",
+    size: "7.77 oz",
+    profile: "Cereal & honeyed sweetness",
+    roast: "MEDIUM ROAST",
+    caffeine: "200 mg",
+  },
+  {
+    name: "STORMIO BOOST",
+    type: "Coffee+",
+    size: "7.77 oz",
+    profile: "Woody & Earthy",
+    roast: "MEDIUM ROAST",
+    caffeine: "200 mg",
+  },
+  {
+    name: "COLD BREW STYLE",
+    type: "XL Coffees",
+    size: "12 oz",
+    profile: "Roasted caramel",
+    roast: "MEDIUM ROAST",
+    caffeine: "114 mg",
+  },
+  {
+    name: "ALTO AMBRATO",
+    type: "XL Coffees",
+    size: "12 oz",
+    profile: "Toasted cereal & sweet caramel",
+    roast: "LIGHT ROAST",
+    caffeine: "170 mg",
+  },
+  {
+    name: "ALTO ONICE",
+    type: "XL Coffees",
+    size: "12 oz",
+    profile: "Cocoa & spice",
+    roast: "MEDIUM ROAST",
+    caffeine: "190 mg",
+  },
+  {
+    name: "POUR-OVER STYLE",
+    type: "XL Coffees",
+    size: "18 oz",
+    profile: "Smoky, woody & earthy",
+    roast: "DARK ROAST",
+    caffeine: "230 mg",
+  },
+  {
+    name: "INTENSO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "195 mg",
+  },
+  {
+    name: "STORMIO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Spicy, woody, cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "170 mg",
+  },
+  {
+    name: "ODACIO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Cereal, bold",
+    roast: "MEDIUM ROAST",
+    caffeine: "170 mg",
+  },
+  {
+    name: "MELOZIO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Nutty & balanced",
+    roast: "MEDIUM ROAST",
+    caffeine: "170 mg",
+  },
+  {
+    name: "MELOZIO DECAFFEINATO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Nutty & balanced",
+    roast: "MEDIUM ROAST",
+    caffeine: "11 mg",
+  },
+  {
+    name: "SOLELIO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Toasted cereal & fruity",
+    roast: "LIGHT ROAST",
+    caffeine: "133 mg",
+  },
+  {
+    name: "HALF CAFFEINATO",
+    type: "Vertuo",
+    size: "7.77 oz",
+    profile: "Biscuit, sweet & velvety",
+    roast: "LIGHT ROAST",
+    caffeine: "83 mg",
+  },
+  {
+    name: "RISTRETTO INTENSO",
+    type: "Vertuo",
+    size: "0.85 oz",
+    profile: "Peppery spices & wood",
+    roast: "DARK ROAST",
+    caffeine: "120 mg",
+  },
+  {
+    name: "IL CAFFÈ",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Cereal, roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "152 mg",
+  },
+  {
+    name: "DIAVOLITTO",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "144 mg",
+  },
+  {
+    name: "ALTISSIO",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Cereal, roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "108 mg",
+  },
+  {
+    name: "ALTISSIO DECAFFEINATO",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Cereal, roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "4 mg",
+  },
+  {
+    name: "ORAFIO",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Caramel & roasted",
+    roast: "MEDIUM ROAST",
+    caffeine: "110 mg",
+  },
+  {
+    name: "TOCCANTO",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Berry & winey",
+    roast: "MEDIUM ROAST",
+    caffeine: "84 mg",
+  },
+  {
+    name: "VOLTESSO",
+    type: "Vertuo",
+    size: "1.35 oz",
+    profile: "Nutty & balanced",
+    roast: "LIGHT ROAST",
+    caffeine: "64 mg",
+  },
+  {
+    name: "DOUBLE ESPRESSO DOLCE",
+    type: "Double Espresso",
+    size: "2.7 oz",
+    profile: "Cereal & malted",
+    roast: "MEDIUM ROAST",
+    caffeine: "133 mg",
+  },
+  {
+    name: "DOUBLE ESPRESSO SCURO",
+    type: "Double Espresso",
+    size: "2.7 oz",
+    profile: "Cocoa & vanilla",
+    roast: "MEDIUM ROAST",
+    caffeine: "150 mg",
+  },
+  {
+    name: "DOUBLE ESPRESSO CHIARO",
+    type: "Double Espresso",
+    size: "2.7 oz",
+    profile: "Woody & earthy",
+    roast: "MEDIUM ROAST",
+    caffeine: "135 mg",
+  },
+  {
+    name: "INIZIO",
+    type: "Gran Lungo",
+    size: "5.07 oz",
+    profile: "Toasted cereal & floral",
+    roast: "MEDIUM ROAST",
+    caffeine: "120 mg",
+  },
+  {
+    name: "FORTADO",
+    type: "Gran Lungo",
+    size: "5.07 oz",
+    profile: "Cocoa & oak",
+    roast: "MEDIUM ROAST",
+    caffeine: "195 mg",
+  },
+  {
+    name: "FORTADO DECAFFEINATO",
+    type: "Gran Lungo",
+    size: "5.07 oz",
+    profile: "Cocoa & oak",
+    roast: "MEDIUM ROAST",
+    caffeine: "7 mg",
+  },
+  {
+    name: "ARONDIO",
+    type: "Gran Lungo",
+    size: "5.07 oz",
+    profile: "Cereal & mild",
+    roast: "MEDIUM ROAST",
+    caffeine: "150 mg",
   },
 ];
 
 export const OriginalCoffees = [
-{
-    name: 'Caramello',
-	type: 'Barista Creations',
- 	size: '3.7 oz',
-    profile: 'Caramel, biscuit & nutty',
-	roast: 'MEDIUM ROAST',
-	caffeine: '62 mg'
+  {
+    name: "Caramello",
+    type: "Barista Creations",
+    size: "3.7 oz",
+    profile: "Caramel, biscuit & nutty",
+    roast: "MEDIUM ROAST",
+    caffeine: "62 mg",
   },
   {
-    name: 'Cioccolatino',
-	type: 'Barista Creations',
- 	size: '3.7 oz',
-    profile: 'Dark chocolate & biscuit cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '62 mg'
-  },{
-    name: 'Nocciola',
-	type: 'Barista Creations',
- 	size: '3.7 oz',
-    profile: 'Rich & nutty',
-	roast: 'MEDIUM ROAST',
-	caffeine: '62 mg'
-  },{
-    name: 'Vaniglia',
-	type: 'Barista Creations',
- 	size: '3.7 oz',
-    profile: 'Sweet biscuit & cereal',
-	roast: 'MEDIUM ROAST',
-	caffeine: '62 mg'
-  },{
-    name: 'Freddo Delicato',
-	type: 'Barista Creations',
- 	size: '1.35 oz',
-    profile: 'Fruity',
-	roast: 'MEDIUM ROAST',
-	caffeine: '72 mg'
+    name: "Cioccolatino",
+    type: "Barista Creations",
+    size: "3.7 oz",
+    profile: "Dark chocolate & biscuit cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "62 mg",
   },
   {
-    name: 'Corto',
-	type: 'Barista Creations',
- 	size: '1.35 oz',
-    profile: 'Spicy & roasted',
-	roast: 'DARK ROAST',
-	caffeine: '103 mg'
-  },{
-    name: 'Scuro',
-	type: 'Barista Creations',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '73 mg'
-  },{
-    name: 'Chiaro',
-	type: 'Barista Creations',
- 	size: '1.35 oz',
-    profile: 'Natural caramel, sweet biscuit',
-	roast: 'LIGHT ROAST',
-	caffeine: '49 mg'
-  },{
-    name: 'Freddo Intenso',
-	type: 'Barista Creations',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '56 mg'
-  },{
-    name: 'Peru Organic',
-	type: 'Single Origin',
- 	size: '1.35 oz',
-    profile: 'Fruity & complex',
-	roast: 'MEDIUM ROAST',
-	caffeine: '60 mg'
-  },{
-    name: 'Colombia',
-	type: 'Single Origin',
- 	size: '1.35 oz',
-    profile: 'Winey & red fruits',
-	roast: 'MEDIUM ROAST',
-	caffeine: '64 mg'
-  },{
-    name: 'Nicaragua',
-	type: 'Single Origin',
- 	size: '1.35 oz',
-    profile: 'Honey & sweet cereal',
-	roast: 'LIGHT ROAST',
-	caffeine: '65 mg'
-  },{
-    name: 'India',
-	type: 'Single Origin',
- 	size: '1.35 oz',
-    profile: 'Woody & spicy',
-	roast: 'DARK ROAST',
-	caffeine: '105 mg'
-  },{
-    name: 'Indonesia',
-	type: 'Single Origin',
- 	size: '1.35 oz',
-    profile: 'Tobacco leaves & woody',
-	roast: 'MEDIUM ROAST',
-	caffeine: '72 mg'
-  },{
-    name: 'Venezia',
-	type: 'Ispirazione Italiana',
- 	size: '0.85 oz',
-    profile: 'Nutty & balanced',
-	roast: 'MEDIUM ROAST',
-	caffeine: '77 mg'
+    name: "Nocciola",
+    type: "Barista Creations",
+    size: "3.7 oz",
+    profile: "Rich & nutty",
+    roast: "MEDIUM ROAST",
+    caffeine: "62 mg",
   },
   {
-    name: 'Napoli',
-	type: 'Ispirazione Italiana',
- 	size: '0.85 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '109 mg'
-  },{
-    name: 'Palermo Kazaar',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Woody & spicy ',
-	roast: 'DARK ROAST',
-	caffeine: '113 mg'
-  },{
-    name: 'Ristretto Italiano',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '75 mg'
-  },{
-    name: 'Firenze Arpeggio',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '63 mg'
-  },{
-    name: 'Firenze Arpeggio Decaffeinato',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '2 mg'
-  },{
-    name: 'Roma',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Woody & earthy',
-	roast: 'MEDIUM ROAST',
-	caffeine: '63 mg'
-  },{
-    name: 'Genova Livanto',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Nutty & sweet caramel',
-	roast: 'MEDIUM ROAST',
-	caffeine: '64 mg'
-  },{
-    name: 'Ristretto Italiano Decaffeinato',
-	type: 'Ispirazione Italiana',
- 	size: '1.35 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '2 mg'
+    name: "Vaniglia",
+    type: "Barista Creations",
+    size: "3.7 oz",
+    profile: "Sweet biscuit & cereal",
+    roast: "MEDIUM ROAST",
+    caffeine: "62 mg",
   },
   {
-    name: 'Rio de Janeiro Espresso',
-	type: 'World Explorations',
- 	size: '1.35 oz',
-    profile: 'Herbal & sandalwood',
-	roast: 'DARK ROAST',
-	caffeine: '77 mg'
-  },{
-    name: 'Paris Espresso',
-	type: 'World Explorations',
- 	size: '1.35 oz',
-    profile: 'Cereal & citrus',
-	roast: 'DARK ROAST',
-	caffeine: '75 mg'
-  },{
-    name: 'Istanbul Espresso',
-	type: 'World Explorations',
- 	size: '1.35 oz',
-    profile: 'Ripe Fruits & nutty',
-	roast: 'DARK ROAST',
-	caffeine: '85 mg'
-  },{
-    name: 'Miami Espresso',
-	type: 'World Explorations',
- 	size: '1.35 oz',
-    profile: 'Cereal',
-	roast: 'DARK ROAST',
-	caffeine: '85 mg'
-  },{
-    name: 'Stockholm Fortissio Lungo',
-	type: 'World Explorations',
- 	size: '3.7 oz',
-    profile: 'Roasted & chocolatey',
-	roast: 'DARK ROAST',
-	caffeine: '80 mg'
-  },{
-    name: 'Tokyo Vivalto Lungo',
-	type: 'World Explorations',
- 	size: '3.7 oz',
-    profile: 'Flowery & complex',
-	roast: 'MEDIUM ROAST',
-	caffeine: '82 mg'
+    name: "Freddo Delicato",
+    type: "Barista Creations",
+    size: "1.35 oz",
+    profile: "Fruity",
+    roast: "MEDIUM ROAST",
+    caffeine: "72 mg",
   },
   {
-    name: 'Vienna Linizio Lungo',
-	type: 'World Explorations',
- 	size: '3.7 oz',
-    profile: 'Nutty & balanced',
-	roast: 'MEDIUM ROAST',
-	caffeine: '75 mg'
-  },{
-    name: 'Shanghai Lungo',
-	type: 'World Explorations',
- 	size: '3.7 oz',
-    profile: 'Fruitiness & fine acidity',
-	roast: 'LIGHT ROAST',
-	caffeine: '82 mg'
-  },{
-    name: 'Buenos Aires Lungo',
-	type: 'World Explorations',
- 	size: '3.7 oz',
-    profile: 'Sweet & cereal',
-	roast: 'LIGHT ROAST',
-	caffeine: '104 mg'
-  },{
-    name: 'Cape Town Envivo Lungo',
-	type: 'World Explorations',
- 	size: '3.7 oz',
-    profile: 'Woody & earthy',
-	roast: 'DARK ROAST',
-	caffeine: '110 mg'
-  },{
-    name: 'Volluto',
-	type: 'Espresso',
- 	size: '1.35 oz',
-    profile: 'Fruity, biscuit & cereal',
-	roast: 'LIGHT ROAST',
-	caffeine: '64 mg'
-  },{
-    name: 'Volluto Decaffeinato',
-	type: 'Espresso',
- 	size: '1.35 oz',
-    profile: 'Fruity, biscuit & cereal',
-	roast: 'LIGHT ROAST',
-	caffeine: '2 mg'
+    name: "Corto",
+    type: "Barista Creations",
+    size: "1.35 oz",
+    profile: "Spicy & roasted",
+    roast: "DARK ROAST",
+    caffeine: "103 mg",
   },
   {
-    name: 'Cosi',
-	type: 'Espresso',
- 	size: '1.35 oz',
-    profile: 'Toasted cereal & fruity',
-	roast: 'LIGHT ROAST',
-	caffeine: '59 mg'
-  },{
-    name: 'Capriccio',
-	type: 'Espresso',
- 	size: '1.35 oz',
-    profile: 'Woody & earthy',
-	roast: 'LIGHT ROAST',
-	caffeine: '70 mg'
-  }
-]
-
+    name: "Scuro",
+    type: "Barista Creations",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "73 mg",
+  },
+  {
+    name: "Chiaro",
+    type: "Barista Creations",
+    size: "1.35 oz",
+    profile: "Natural caramel, sweet biscuit",
+    roast: "LIGHT ROAST",
+    caffeine: "49 mg",
+  },
+  {
+    name: "Freddo Intenso",
+    type: "Barista Creations",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "56 mg",
+  },
+  {
+    name: "Peru Organic",
+    type: "Single Origin",
+    size: "1.35 oz",
+    profile: "Fruity & complex",
+    roast: "MEDIUM ROAST",
+    caffeine: "60 mg",
+  },
+  {
+    name: "Colombia",
+    type: "Single Origin",
+    size: "1.35 oz",
+    profile: "Winey & red fruits",
+    roast: "MEDIUM ROAST",
+    caffeine: "64 mg",
+  },
+  {
+    name: "Nicaragua",
+    type: "Single Origin",
+    size: "1.35 oz",
+    profile: "Honey & sweet cereal",
+    roast: "LIGHT ROAST",
+    caffeine: "65 mg",
+  },
+  {
+    name: "India",
+    type: "Single Origin",
+    size: "1.35 oz",
+    profile: "Woody & spicy",
+    roast: "DARK ROAST",
+    caffeine: "105 mg",
+  },
+  {
+    name: "Indonesia",
+    type: "Single Origin",
+    size: "1.35 oz",
+    profile: "Tobacco leaves & woody",
+    roast: "MEDIUM ROAST",
+    caffeine: "72 mg",
+  },
+  {
+    name: "Venezia",
+    type: "Ispirazione Italiana",
+    size: "0.85 oz",
+    profile: "Nutty & balanced",
+    roast: "MEDIUM ROAST",
+    caffeine: "77 mg",
+  },
+  {
+    name: "Napoli",
+    type: "Ispirazione Italiana",
+    size: "0.85 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "109 mg",
+  },
+  {
+    name: "Palermo Kazaar",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Woody & spicy ",
+    roast: "DARK ROAST",
+    caffeine: "113 mg",
+  },
+  {
+    name: "Ristretto Italiano",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "75 mg",
+  },
+  {
+    name: "Firenze Arpeggio",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "63 mg",
+  },
+  {
+    name: "Firenze Arpeggio Decaffeinato",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "2 mg",
+  },
+  {
+    name: "Roma",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Woody & earthy",
+    roast: "MEDIUM ROAST",
+    caffeine: "63 mg",
+  },
+  {
+    name: "Genova Livanto",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Nutty & sweet caramel",
+    roast: "MEDIUM ROAST",
+    caffeine: "64 mg",
+  },
+  {
+    name: "Ristretto Italiano Decaffeinato",
+    type: "Ispirazione Italiana",
+    size: "1.35 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "2 mg",
+  },
+  {
+    name: "Rio de Janeiro Espresso",
+    type: "World Explorations",
+    size: "1.35 oz",
+    profile: "Herbal & sandalwood",
+    roast: "DARK ROAST",
+    caffeine: "77 mg",
+  },
+  {
+    name: "Paris Espresso",
+    type: "World Explorations",
+    size: "1.35 oz",
+    profile: "Cereal & citrus",
+    roast: "DARK ROAST",
+    caffeine: "75 mg",
+  },
+  {
+    name: "Istanbul Espresso",
+    type: "World Explorations",
+    size: "1.35 oz",
+    profile: "Ripe Fruits & nutty",
+    roast: "DARK ROAST",
+    caffeine: "85 mg",
+  },
+  {
+    name: "Miami Espresso",
+    type: "World Explorations",
+    size: "1.35 oz",
+    profile: "Cereal",
+    roast: "DARK ROAST",
+    caffeine: "85 mg",
+  },
+  {
+    name: "Stockholm Fortissio Lungo",
+    type: "World Explorations",
+    size: "3.7 oz",
+    profile: "Roasted & chocolatey",
+    roast: "DARK ROAST",
+    caffeine: "80 mg",
+  },
+  {
+    name: "Tokyo Vivalto Lungo",
+    type: "World Explorations",
+    size: "3.7 oz",
+    profile: "Flowery & complex",
+    roast: "MEDIUM ROAST",
+    caffeine: "82 mg",
+  },
+  {
+    name: "Vienna Linizio Lungo",
+    type: "World Explorations",
+    size: "3.7 oz",
+    profile: "Nutty & balanced",
+    roast: "MEDIUM ROAST",
+    caffeine: "75 mg",
+  },
+  {
+    name: "Shanghai Lungo",
+    type: "World Explorations",
+    size: "3.7 oz",
+    profile: "Fruitiness & fine acidity",
+    roast: "LIGHT ROAST",
+    caffeine: "82 mg",
+  },
+  {
+    name: "Buenos Aires Lungo",
+    type: "World Explorations",
+    size: "3.7 oz",
+    profile: "Sweet & cereal",
+    roast: "LIGHT ROAST",
+    caffeine: "104 mg",
+  },
+  {
+    name: "Cape Town Envivo Lungo",
+    type: "World Explorations",
+    size: "3.7 oz",
+    profile: "Woody & earthy",
+    roast: "DARK ROAST",
+    caffeine: "110 mg",
+  },
+  {
+    name: "Volluto",
+    type: "Espresso",
+    size: "1.35 oz",
+    profile: "Fruity, biscuit & cereal",
+    roast: "LIGHT ROAST",
+    caffeine: "64 mg",
+  },
+  {
+    name: "Volluto Decaffeinato",
+    type: "Espresso",
+    size: "1.35 oz",
+    profile: "Fruity, biscuit & cereal",
+    roast: "LIGHT ROAST",
+    caffeine: "2 mg",
+  },
+  {
+    name: "Cosi",
+    type: "Espresso",
+    size: "1.35 oz",
+    profile: "Toasted cereal & fruity",
+    roast: "LIGHT ROAST",
+    caffeine: "59 mg",
+  },
+  {
+    name: "Capriccio",
+    type: "Espresso",
+    size: "1.35 oz",
+    profile: "Woody & earthy",
+    roast: "LIGHT ROAST",
+    caffeine: "70 mg",
+  },
+];
 ---
